@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1B83F400202A030B00FEAB21 /* Croppy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B83F3FE202A030B00FEAB21 /* Croppy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B83F407202A0A1500FEAB21 /* UIImage+Croppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B83F3FB202A030B00FEAB21 /* Croppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Croppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B83F3FE202A030B00FEAB21 /* Croppy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Croppy.h; sourceTree = "<group>"; };
 		1B83F3FF202A030B00FEAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Croppy.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				1B83F3FE202A030B00FEAB21 /* Croppy.h */,
 				1B83F3FF202A030B00FEAB21 /* Info.plist */,
+				1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */,
 			);
 			path = Croppy;
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					1B83F3FA202A030B00FEAB21 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B83F407202A0A1500FEAB21 /* UIImage+Croppy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +258,7 @@
 		1B83F404202A030B00FEAB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.kasler.Croppy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +281,7 @@
 		1B83F405202A030B00FEAB21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
