@@ -6,7 +6,6 @@
 //  Copyright © 2018 KhuongPham. All rights reserved.
 //
 
-import Foundation
 import CoreGraphics
 
 extension UIImage {

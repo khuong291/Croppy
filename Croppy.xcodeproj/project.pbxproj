@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B83F400202A030B00FEAB21 /* Croppy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B83F3FE202A030B00FEAB21 /* Croppy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B83F407202A0A1500FEAB21 /* UIImage+Croppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */; };
+		1B83F4782031F48800FEAB21 /* CGGeometry+Croppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		1B83F3FE202A030B00FEAB21 /* Croppy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Croppy.h; sourceTree = "<group>"; };
 		1B83F3FF202A030B00FEAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Croppy.swift"; sourceTree = "<group>"; };
+		1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGGeometry+Croppy.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				1B83F3FE202A030B00FEAB21 /* Croppy.h */,
 				1B83F3FF202A030B00FEAB21 /* Info.plist */,
 				1B83F406202A0A1500FEAB21 /* UIImage+Croppy.swift */,
+				1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */,
 			);
 			path = Croppy;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B83F407202A0A1500FEAB21 /* UIImage+Croppy.swift in Sources */,
+				1B83F4782031F48800FEAB21 /* CGGeometry+Croppy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
