@@ -8,13 +8,13 @@
 
 import CoreGraphics
 
-let croppyPointNull: CGPoint = CGPoint(x: CGFloat(FP_INFINITE), y: CGFloat(FP_INFINITE))
+public let croppyPointNull: CGPoint = CGPoint(x: CGFloat(FP_INFINITE), y: CGFloat(FP_INFINITE))
 
-func croppyRectCenterPoint(rect: CGRect) -> CGPoint {
+public func croppyRectCenterPoint(rect: CGRect) -> CGPoint {
     return CGPoint(x: rect.minX + rect.width / 2, y: rect.minY + rect.height / 2)
 }
 
-func croppyRectScaleAroundPoint(rect: CGRect, point: CGPoint, sx: CGFloat, sy: CGFloat) -> CGRect {
+public func croppyRectScaleAroundPoint(rect: CGRect, point: CGPoint, sx: CGFloat, sy: CGFloat) -> CGRect {
     var rect = rect
     var translationTransform = CGAffineTransform(translationX: -point.x, y: -point.y)
     rect = rect.applying(translationTransform)
@@ -25,11 +25,11 @@ func croppyRectScaleAroundPoint(rect: CGRect, point: CGPoint, sx: CGFloat, sy: C
     return rect
 }
 
-func croppyPointIsNull(point: CGPoint) -> Bool {
+public func croppyPointIsNull(point: CGPoint) -> Bool {
     return point.equalTo(croppyPointNull)
 }
 
-func croppyPointRotateAroundPoint(point: CGPoint, pivot: CGPoint, angle: CGFloat) -> CGPoint {
+public func croppyPointRotateAroundPoint(point: CGPoint, pivot: CGPoint, angle: CGFloat) -> CGPoint {
     var point = point
     var translationTransform = CGAffineTransform(translationX: -pivot.x, y: -pivot.y)
     point = point.applying(translationTransform)
@@ -40,7 +40,7 @@ func croppyPointRotateAroundPoint(point: CGPoint, pivot: CGPoint, angle: CGFloat
     return point
 }
 
-func croppyPointDistance(p1: CGPoint, p2: CGPoint) -> CGFloat {
+public func croppyPointDistance(p1: CGPoint, p2: CGPoint) -> CGFloat {
     let dx = p1.x - p2.x
     let dy = p1.y - p2.y
     return sqrt(pow(dx, 2) + pow(dy, 2))

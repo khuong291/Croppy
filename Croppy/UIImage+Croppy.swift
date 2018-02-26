@@ -8,8 +8,8 @@
 
 import CoreGraphics
 
-extension UIImage {
-    func fixOrientation() -> UIImage {
+public extension UIImage {
+    public func fixOrientation() -> UIImage {
         guard let cgImage = cgImage else {
             return self
         }
@@ -85,7 +85,7 @@ extension UIImage {
         return _image
     }
     
-    func rotate(byAngle angleInRadians: CGFloat) -> UIImage {
+    public func rotate(byAngle angleInRadians: CGFloat) -> UIImage {
         guard let cgImage = cgImage else {
             return self
         }

@@ -12,6 +12,7 @@
 		1B83F4782031F48800FEAB21 /* CGGeometry+Croppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */; };
 		1B83F47A203F0C4F00FEAB21 /* CroppyTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F479203F0C4F00FEAB21 /* CroppyTouchView.swift */; };
 		1B83F47C2042F64000FEAB21 /* CroppyInternalUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F47B2042F64000FEAB21 /* CroppyInternalUtility.swift */; };
+		1B83F47E2044694900FEAB21 /* CroppyImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F47D2044694900FEAB21 /* CroppyImageScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGGeometry+Croppy.swift"; sourceTree = "<group>"; };
 		1B83F479203F0C4F00FEAB21 /* CroppyTouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppyTouchView.swift; sourceTree = "<group>"; };
 		1B83F47B2042F64000FEAB21 /* CroppyInternalUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppyInternalUtility.swift; sourceTree = "<group>"; };
+		1B83F47D2044694900FEAB21 /* CroppyImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppyImageScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				1B83F4772031F48800FEAB21 /* CGGeometry+Croppy.swift */,
 				1B83F479203F0C4F00FEAB21 /* CroppyTouchView.swift */,
 				1B83F47B2042F64000FEAB21 /* CroppyInternalUtility.swift */,
+				1B83F47D2044694900FEAB21 /* CroppyImageScrollView.swift */,
 			);
 			path = Croppy;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B83F47E2044694900FEAB21 /* CroppyImageScrollView.swift in Sources */,
 				1B83F47C2042F64000FEAB21 /* CroppyInternalUtility.swift in Sources */,
 				1B83F407202A0A1500FEAB21 /* UIImage+Croppy.swift in Sources */,
 				1B83F4782031F48800FEAB21 /* CGGeometry+Croppy.swift in Sources */,
