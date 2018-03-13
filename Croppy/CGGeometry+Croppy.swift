@@ -8,6 +8,11 @@
 
 import CoreGraphics
 
+public struct CroppyLineSegment {
+    var start: CGPoint
+    var end: CGPoint
+}
+
 public let croppyPointNull: CGPoint = CGPoint(x: CGFloat(FP_INFINITE), y: CGFloat(FP_INFINITE))
 
 public func croppyRectCenterPoint(rect: CGRect) -> CGPoint {
@@ -44,4 +49,13 @@ public func croppyPointDistance(p1: CGPoint, p2: CGPoint) -> CGFloat {
     let dx = p1.x - p2.x
     let dy = p1.y - p2.y
     return sqrt(pow(dx, 2) + pow(dy, 2))
+}
+
+public func croppyLineSegmentMake(start: CGPoint, end: CGPoint) -> CroppyLineSegment {
+    return CroppyLineSegment(start: start, end: end)
+}
+
+public func croppyLineSegmentRotateAroundPoint(line: CroppyLineSegment, pivot: CGPoint, angle: CGFloat) -> CroppyLineSegment {
+    return croppyLineSegmentMake(start: croppyPointRotateAroundPoint(point: line.start, pivot: pivot, angle: angle),
+                                 end: croppyPointRotateAroundPoint(point: line.end, pivot: pivot, angle: angle))
 }
