@@ -59,3 +59,38 @@ public func croppyLineSegmentRotateAroundPoint(line: CroppyLineSegment, pivot: C
     return croppyLineSegmentMake(start: croppyPointRotateAroundPoint(point: line.start, pivot: pivot, angle: angle),
                                  end: croppyPointRotateAroundPoint(point: line.end, pivot: pivot, angle: angle))
 }
+
+public func croppyLineSegmentIntersection(ls1: CroppyLineSegment, ls2: CroppyLineSegment) -> CGPoint {
+    let x1 = ls1.start.x
+    let y1 = ls1.start.y
+    let x2 = ls1.end.x
+    let y2 = ls1.end.y
+    let x3 = ls2.start.x
+    let y3 = ls2.start.y
+    let x4 = ls2.end.x
+    let y4 = ls2.end.y
+    
+    let numeratorA = (x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)
+    let numeratorB = (x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)
+    let denominator = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1)
+    
+    // Check the coincidence
+    if fabs(numeratorA) < CGFloat(Float.ulpOfOne) && fabs(numeratorB) < CGFloat(Float.ulpOfOne) && fabs(denominator) < CGFloat(Float.ulpOfOne) {
+        return CGPoint(x: (x1 + x2) * 0.5, y: (y1 + y2) * 0.5)
+    }
+    
+    // Check the parallelism.
+    if fabs(denominator) < CGFloat(Float.ulpOfOne) {
+        return croppyPointNull
+    }
+    
+    // Check the intersection.
+    let uA = numeratorA / denominator
+    let uB = numeratorB / denominator
+    
+    if (uA < 0 || uA > 1 || uB < 0 || uB > 1) {
+        return croppyPointNull
+    }
+    
+    return CGPoint(x: x1 + uA * (x2 - x1), y: y1 + uA * (y2 - y1))
+}
